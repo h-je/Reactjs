@@ -2,6 +2,9 @@ import React from "react"
 import Banner from '../assets/banner-gtvt.png'
 import { User, Search } from "react-feather"
 import Logo from '../assets/Logo.png'
+import { Link } from "react-router-dom"
+
+
 const Header = () => {
     return (
         <div className="banner" >
@@ -17,9 +20,9 @@ const Header = () => {
 
                         </select>
                         <div className="w-full relative ">
-                            <input type="text"  placeholder="tìm kiếm tài liệu ở đây bạn " className="w-full" />
+                            <input type="text" placeholder="tìm kiếm tài liệu ở đây bạn " className="w-full" />
                             <button className="absolute right-0 bg-[#60A917]" type="submit" >
-                                <Search color="#000"  className="item-center mr-3 " />
+                                <Search color="#000" className="item-center mr-3 " />
                             </button>
 
                         </div>
@@ -29,14 +32,14 @@ const Header = () => {
 
                 </form>
                 <div className="flex flex-none items-center mr-3 gap-x-2 text-white ">
-                    <button>Dang nhap</button>
+                    <Link to="/login">Dang nhap</Link>
                     <div className="rounded-full bg-white w-7 h-7 flex items-center justify-center">
                         <User color="#000" />
                     </div>
                 </div>
             </div>
         </div>
-        
+
 
     )
 }
